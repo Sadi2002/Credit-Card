@@ -23,6 +23,13 @@
       <header class="header-card">
         <div class="back-card">
           <span class="cvc">000</span>
+          <div class="cvc-box">
+            <div class="cvc-1"></div>
+            <div class="cvc-2"></div>
+            <div class="cvc-3"></div>
+            <div class="cvc-4"></div>
+            <div class="cvc-5"></div>
+          </div>
         </div>
         <div class="front-card">
           <div class="circles-box">
@@ -44,7 +51,7 @@
             placeholder="e.g Jade Appleseed"
             >cardholder name</label
           >
-          <input type="text" id="form-name" />
+          <input type="text" id="form-name" required="require" />
         </div>
         <div class="details-form-box">
           <label
@@ -53,21 +60,38 @@
             placeholder="e.g 1234 5678 9123 000"
             >card number</label
           >
-          <input type="number" id="form-number" />
+          <input type="number" id="form-number" required="require" />
         </div>
 
         <div class="details-date-box">
-          <label
-            for="#"
-            class="form-header"
-            placeholder="e.g 1234 5678 9123 000"
-            >exp. date (mm/yy) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp;cvc</label
-          >
+          <div class="label-form-box">
+            <label
+              for="#"
+              class="form-header"
+              placeholder="e.g 1234 5678 9123 000"
+              >exp. date (mm/yy)</label
+            >
+            <label
+              for="#"
+              class="form-header"
+              placeholder="e.g 1234 5678 9123 000"
+              >cvc</label
+            >
+          </div>
           <div class="date-box">
-            <input type="number" id="form-date" />
-            <input type="number" id="form-date" />
-            <input type="number" id="form-date-bigger" />
+            <input
+              type="number"
+              id="form-date"
+              class="first-date"
+              required="require"
+            />
+            <input
+              type="number"
+              id="form-date"
+              class="second-date"
+              required="require"
+            />
+            <input type="number" id="form-date-bigger" required="require" />
           </div>
         </div>
         <button class="form-btn">Confirm</button>
